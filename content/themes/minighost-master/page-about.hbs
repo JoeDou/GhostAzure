@@ -18,13 +18,57 @@
 				{{#post}}	
 				<article role="article" itemscope itemtype="http://schema.org/Article" class="postlistArticle">
 					<h1 class="post-title">{{title}}</h1>
-					<div class="post-info"> Test
+					<div class="post-info">
 						{{#if tags}}
 							<div class="tags">
 							<i class="fa fa-tags fa-lg"></i> {{tags separator=" | "}}
 							</div>
 						{{/if}}
 					</div>
+
+					<div class="header-menu">
+						<!--- HOME BUTTON --->
+						<a href="{{@blog.url}}" title="Home">
+							<div class="header-menu-button">
+								<span class="header-menu-button-label">
+									HOME
+								</span>
+								<span class="fa-stack header-menu-button-icon">
+									<i class="fa fa-square-o fa-stack-2x"></i>
+									<i class="fa fa-home fa-stack-1x"></i>
+								</span>
+							</div>
+						</a>
+						
+						<!--- ABOUT BUTTON --->
+						<!--- Link to a static page titled "About" --->
+						<a href="{{@blog.url}}/about/" title="About">
+							<div class="header-menu-button">
+								<span class="header-menu-button-label">
+									ABOUT
+								</span>
+								<span class="fa-stack header-menu-button-icon">
+									<i class="fa fa-square-o fa-stack-2x"></i>
+									<i class="fa fa-user fa-stack-1x"></i>
+								</span>
+							</div>
+						</a>
+						
+						<!--- RSS BUTTON --->
+						<a href="{{@blog.url}}/projects" title="Subscribe">
+							<div class="header-menu-button">
+								<span class="header-menu-button-label">
+									PROJECTS
+								</span>
+								<span class="fa-stack header-menu-button-icon">
+									<i class="fa fa-square-o fa-stack-2x"></i>
+									<i class="fa fa-laptop fa-stack-1x"></i>
+								</span>
+							</div>
+						</a>
+					</div>
+
+
 					<div class="postContent">
 						{{content}} 
 					</div>
