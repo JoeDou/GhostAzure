@@ -26,23 +26,6 @@
       {{content}}
     </section>
 
-    <footer>
-      {{#if author}}
-      <section class="author_info margin_top_big">
-        <div class="alignleft border rad_circle" style="height: 87px; width: 87px; background-image: url({{author.image}}); background-size: cover;"></div>
-        <p class="margin_left_medium text small">Author</p>
-        <p class="margin_left_medium text bold"><a href="{{author.website}}">{{author.name}}</a></p>
-        <p class="margin_left_medium text small">{{author.bio}}</p>
-      </section>
-      {{/if}}
-    </footer>
-
     {{/post}}
-
-    {{!
-      Here, you can add disqus comment.
-      Also go to partials/disqus-comment to set your SHORTNAME.
-    }}
-    {{!> disqus-comment}}
     </article>
 </main>
